@@ -1,0 +1,13 @@
+name: Example Job
+
+on: [push]  # Runs when you push code
+
+jobs:
+  build:
+    runs-on: self-hosted  # This tells GitHub to use your runner
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Run a sample command
+        run: echo "Hello from self-hosted runner!"
